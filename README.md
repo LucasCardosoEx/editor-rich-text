@@ -1,6 +1,6 @@
 # Basic Rich Text Editor with React
 
-image.png
+![image](https://github.com/LucasCardosoEx/editor-rich-text/assets/110869594/eceec92a-a058-4fe6-ad13-da8a9f5468c3)
 
 # Getting Started with Create React App
 
