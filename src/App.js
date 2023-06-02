@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import JoditEditor from "jodit-react";
+import React, { useRef, useState } from "react";
 
 function App() {
+  const editor = useRef(null);
+  const [content, setContent] = useState("");
+
+  const config = {
+    readonly: false,
+    height: "400",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <JoditEditor
+      ref={editor}
+      value={content}
+      config={config}
+      tabIndex={1} // tabIndex of textarea
+      onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+      onChange={(newContent) => {}}
+    />
   );
 }
 
